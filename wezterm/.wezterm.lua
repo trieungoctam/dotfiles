@@ -28,7 +28,7 @@ config.window_padding = {
 }
 
 config.color_scheme = "Tokyo Night"
-config.font = wezterm.font("Inconsolata Nerd Font Mono", { weight = "Medium", stretch = "Expanded" })
+config.font = wezterm.font("Hack Nerd Font")
 config.font_size = 13
 config.line_height = 1.2
 
