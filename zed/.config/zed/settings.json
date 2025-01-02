@@ -1,0 +1,186 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "base_keymap": "VSCode",
+  "theme": "Catppuccin Macchiato",
+  "ui_font_size": 16,
+  "buffer_font_size": 14,
+  // NOTE: Change this to your preferred font
+  "buffer_font_family": "Hack Nerd Font",
+  // Vim mode
+  "vim_mode": true,
+  // Show line numbers
+  "relative_line_numbers": true,
+  "tab_bar": {
+    "show": true
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  // Indentation, rainbow indentations
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+  // NOTE: Zen mode
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15
+  },
+  // Use Copilot as default
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-5-sonnet"
+    },
+    "version": "2"
+  },
+  // Inlay hints preconfigured by Zed: Go, Rust, Typescript, Python, Zig and Kotlin
+  "inlay_hints": {
+    "enabled": true
+  },
+  // LSP
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "usePlaceholders": true,
+        "completeUnimported": true
+      }
+    },
+    "pylance": {
+      "initialization_options": {
+        "typeCheckingMode": "basic",
+        "autoImportCompletions": true
+      }
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "checkOnSave": {
+          "command": "clippy"
+        }
+      },
+      "settings": {
+        "cargo.loadOutDirsFromCheck": true,
+        "procMacro.enable": true
+      }
+    },
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "includeInlayParameterNameHints": "all",
+          "includeInlayFunctionParameterTypeHints": true,
+          "includeInlayVariableTypeHints": true
+        }
+      }
+    },
+    "zls": {
+      "initialization_options": {
+        "inlayHints": true
+      }
+    },
+    "kotlin-language-server": {
+      "initialization_options": {
+        "inlayHints": true
+      }
+    },
+    "zig-language-server": {
+      "initialization_options": {
+        "inlayHints": true
+      }
+    }
+  },
+  "languages": {
+    "go": {
+      "formatter": "language_server",
+      "language_servers": ["gopls"]
+    },
+    "python": {
+      "formatter": "language_server",
+      "language_servers": ["pylance"]
+    },
+    "rust": {
+      "formatter": "language_server",
+      "language_servers": ["rust-analyzer"]
+    },
+    "TypeScript": {
+      "formatter": "language_server",
+      "language_servers": ["typescript-language-server", "!vtsls"],
+      "prettier": { "allowed": true }
+    },
+    "TSX": {
+      "formatter": "language_server",
+      "language_servers": ["typescript-language-server", "!vtsls"],
+      "prettier": { "allowed": true }
+    },
+    "JavaScript": {
+      "formatter": "language_server",
+      "language_servers": ["typescript-language-server", "!vtsls"],
+      "prettier": { "allowed": true }
+    }
+  },
+  // Use zed commit editor
+  "terminal": {
+    "env": {
+      "EDITOR": "zed --wait"
+    }
+  },
+  // File syntax highlighting
+  "file_types": {
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "JSON": ["json", "jsonc", "*.code-snippets"]
+  },
+  // File scan exclusions, hide on the file explorer and search
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // above is default from Zed
+    "**/out",
+    "**/dist",
+    "**/.husky",
+    "**/.turbo",
+    "**/.vscode-test",
+    "**/.vscode",
+    "**/.next",
+    "**/.storybook",
+    "**/.tap",
+    "**/.nyc_output",
+    "**/report",
+    "**/node_modules"
+  ],
+  // Turn off telemetry
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  // Move all panel to the right
+  "project_panel": {
+    "button": true,
+    "dock": "right",
+    "git_status": true
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  // Move some unnecessary panels to the left
+  "notification_panel": {
+    "dock": "left"
+  },
+  "chat_panel": {
+    "dock": "left"
+  }
+}

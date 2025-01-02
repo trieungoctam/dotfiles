@@ -18,7 +18,7 @@ config.window_background_image = bg_image
 -- end image setting
 
 -- window setting
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.92
 config.macos_window_background_blur = 85
 config.window_padding = {
 	left = 0,
